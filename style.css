@@ -77,9 +77,9 @@ button:hover:disabled {
   margin: 1.5rem 0;
 }
 
-.btn-wrapper:hover {
+/* .btn-wrapper:hover {
   opacity: 80%;
-}
+} */
 
 .btn-primary:hover ~ .btn-arrow,
 .btn-link:hover ~ .btn-arrow,
@@ -88,6 +88,21 @@ button:hover:disabled {
   transition: transform 0.3s ease;
 }
 
+/* .btn-primary:hover,
+.btn-arrow:hover,
+.btn-arrow:hover ~ .btn-primary {
+  opacity: 80%;
+} */
+
+.btn-primary:hover,
+.btn-arrow:hover,
+.btn-primary:hover ~ .btn-arrow {
+  opacity: 80%;
+}
+
+.btn-wrapper:nth-child(2):hover ~ .btn-wrapper:nth-child(1) {
+  opacity: 80%;
+}
 
 .container {
   padding: 1rem 5rem;
@@ -244,19 +259,22 @@ nav ul li.active {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
   grid-template-columns: 1fr 1fr;
+  background-color: coral;
 }
 
 #works .works-list.list-format-row {
   gap: 8rem;
   display: grid;
   grid-template-columns: 1fr;
+  background-color: red;
 }
 
 #works .works-list .work.list-format-row {
   width: 100%;
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   gap: 8%;
+  background-color: purple;
 }
 
 #works .works-list .work .text-content.list-format-row {
